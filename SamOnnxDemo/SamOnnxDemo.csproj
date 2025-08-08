@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="*" />
+    <PackageReference Include="OpenCvSharp4" Version="*" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" Version="*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="sam_encoder.onnx" CopyToOutputDirectory="Always" />
+    <None Include="sam_decoder.onnx" CopyToOutputDirectory="Always" />
+    <None Include="ImageSample.jpg"  CopyToOutputDirectory="Always" />
+  </ItemGroup>
+</Project>
