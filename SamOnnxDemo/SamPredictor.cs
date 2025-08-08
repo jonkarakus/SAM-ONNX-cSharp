@@ -12,10 +12,10 @@ namespace SamOnnx.Runtime
     /// Provides methods for image segmentation using box and point prompts.   
     public class SamOnnxRuntime : IDisposable
     {
-        private InferenceSession imageEncoderSession;
-        private InferenceSession maskDecoderSession;
+        private InferenceSession imageEncoderSession = default!;
+        private InferenceSession maskDecoderSession = default!;
         private bool initialized = false;
-        private float[] imageEmbedding;
+        private Mat imageEmbedding = default!;
         private int[] embeddingSize = new int[4];
         private Size originalImageSize;
         
