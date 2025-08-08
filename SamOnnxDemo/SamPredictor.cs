@@ -15,7 +15,7 @@ namespace SamOnnx.Runtime
         private InferenceSession imageEncoderSession = default!;
         private InferenceSession maskDecoderSession = default!;
         private bool initialized = false;
-        private Mat imageEmbedding = default!;
+        private float[] imageEmbedding = Array.Empty<float>();
         private int[] embeddingSize = new int[4];
         private Size originalImageSize;
         
