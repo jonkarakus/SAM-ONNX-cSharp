@@ -8,11 +8,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="*" />
-    <PackageReference Include="OpenCvSharp4" Version="*" />
-    <PackageReference Include="OpenCvSharp4.runtime.win" Version="*" />
-  </ItemGroup>
+<ItemGroup>
+  <!-- Copy models if they exist locally (skip in CI if not present) -->
+  <None Include="..\models\sam_encoder.onnx" Link="sam_encoder.onnx"
+        CopyToOutputDirectory="PreserveNewest"
+        Condition="Exists('..\models\sam_encoder.onnx')" />
+  <None Include="..\models\sam_decoder.onnx" Link="sam_decoder.onnx"
+        CopyToOutputDirectory="PreserveNewest"
+        Condition="Exists('..\models\sam_decoder.onnx')" />
+
+  <!-- Always copy the sample image from assets -->
+  <None Include="..\assets\ImageSample.jpg" Link="ImageSample.jpg"
+        CopyToOutputDirectory="PreserveNewest" />
+</ItemGroup>
 
   <ItemGroup>
     <None Include="sam_encoder.onnx" CopyToOutputDirectory="Always" />
