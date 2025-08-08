@@ -1,0 +1,40 @@
+# --- .NET / C# ---
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Build outputs
+*.dll
+*.exe
+*.pdb
+*.deps.json
+*.runtimeconfig.json
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# VS Code / JetBrains
+.vscode/
+.idea/
+*.sln.iml
+
+# Jupyter / Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Models & large artifacts (kept local)
+models/
+*.onnx
+*.pth
+*.pt
+*.ckpt
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
