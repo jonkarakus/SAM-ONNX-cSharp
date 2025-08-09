@@ -1,0 +1,19 @@
+﻿name: publish-demo
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Publish
+        run: dotnet publish -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true -o dist/SamOnnxDemo-win-x64 SamOnnxDemo/SamOnnxDemo.csproj
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SamOnnxDemo-win-x64
+          path: dist/SamOnnxDemo-win-x64
