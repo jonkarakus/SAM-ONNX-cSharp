@@ -13,6 +13,6 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - name: Restore
-        run: dotnet restore SamOnnxDemo/SamOnnxDemo.csproj
+        run: dotnet restore SamSharp_with_Demo/SamOnnxDemo.csproj
       - name: Build
-        run: dotnet build -c Release SamOnnxDemo/SamOnnxDemo.csproj
+        run: dotnet build -c Release SamSharp_with_Demo/SamOnnxDemo.csproj

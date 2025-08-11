@@ -1,4 +1,4 @@
-﻿param(
+param(
   [switch]$Release
 )
 
@@ -20,7 +20,7 @@ $img = Join-Path $root "assets\ImageSample.jpg"
 if (-not (Test-Path $img)) { Write-Warning "[WARN] assets\ImageSample.jpg not found (demo will still run if your code reads another image)" }
 
 # restore & run
-$projDir = Join-Path $root "SamOnnxDemo"
+$projDir = Join-Path $root "SamSharp_with_Demo"
 Set-Location $projDir
 & dotnet restore
 $cfg = if ($Release) { "Release" } else { "Debug" }
