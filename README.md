@@ -87,7 +87,7 @@ Notes:
 
 ## Author
 
-Created and maintained by **Jon Karakus **.
+Created and maintained by **Jon Karakus**.
 
 ----------------------------------------------------------------------------------------------------------
 
