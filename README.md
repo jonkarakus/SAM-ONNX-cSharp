@@ -5,6 +5,7 @@ I originally created this to support a larger project and figured it might be he
 
 This repository also includes an **ONNX conversion notebook** that starts from a single Meta SAM checkpoint and exports **two** ONNX files: an **image encoder** and a **mask decoder**.
 The repository then lets you load SAM’s encoder and decoder ONNX models, preprocess images with OpenCV, and generate segmentation masks from **box** or **point** prompts entirely in .NET (no Python runtime required).
+
 ----------------------------------------------------------------------------------------------------------
 
 ## Features
