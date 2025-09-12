@@ -1,11 +1,10 @@
 # SAM-ONNX-CSharp
 
 This is a C# wrapper around Meta’s Segment Anything Model (SAM) using ONNX Runtime.
-I originally created it to support a larger project and figured it might be helpful for others doing segmentation in C#. 
-The repository lets you load SAM’s encoder and decoder ONNX models, preprocess images with OpenCV, and generate segmentation masks from **box** or **point** prompts—entirely in .NET (no Python runtime required).
+I originally created this to support a larger project and figured it might be helpful for others doing segmentation in C#. 
 
 This repository also includes an **ONNX conversion notebook** that starts from a single Meta SAM checkpoint and exports **two** ONNX files: an **image encoder** and a **mask decoder**.
-
+The repository then lets you load SAM’s encoder and decoder ONNX models, preprocess images with OpenCV, and generate segmentation masks from **box** or **point** prompts entirely in .NET (no Python runtime required).
 ----------------------------------------------------------------------------------------------------------
 
 ## Features
@@ -93,5 +92,5 @@ Created and maintained by **Jon Karakus**.
 
 ## License
 
-The C# wrapper code in this repository is provided for research and development use subject to MIT license.  
+The C# wrapper code in this repository is provided for research and development use, subject to MIT license.  
 The underlying SAM models are provided by Meta and are subject to their license (Apache 2.0). When using the models, review and comply with Meta’s original license and terms.
