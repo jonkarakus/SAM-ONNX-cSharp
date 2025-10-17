@@ -54,7 +54,7 @@ The repository then lets you load SAM’s encoder and decoder ONNX models, prepr
 
 ----------------------------------------------------------------------------------------------------------
 
-## Getting Started (Short)
+## Getting Started
 
 1. **Download a SAM checkpoint** from Meta (links above).  
 2. **Convert to ONNX**: Use `convert_SAM_to_ONNX.ipynb` to export **`sam_encoder.onnx`** and **`sam_decoder.onnx`** from the checkpoint.  
